@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "logging-sink"
+version = "0.1"
+description = "Logging for sier2"
+authors = ["algol60 <algol60@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "logging_sink", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.plugins."sier2.logging"]
+export = "logging_sink:logging_func"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
